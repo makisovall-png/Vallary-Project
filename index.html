@@ -6,6 +6,204 @@
     <title>Home Page</title>
     <link rel="stylesheet" href="dist/css/bootstrap.css">
     <script src="dist/js/bootstrap.js"></script>
+    <style>
+        .footer {
+    background: #0f172a;
+    color: #cbd5e1;
+    padding: 60px 0 20px;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.footer-title {
+    color: #ffffff;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+}
+
+.footer-text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.footer-input {
+    width: 100%;
+    background: #020617;
+    border: 1px solid #1e293b;
+    color: #fff;
+    padding: 10px;
+    margin-bottom: 12px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.footer-input:focus {
+    outline: none;
+    border-color: #38bdf8;
+    box-shadow: 0 0 8px rgba(56, 189, 248, 0.3);
+}
+
+.footer-btn {
+    width: 100%;
+    background: #38bdf8;
+    border: none;
+    padding: 10px;
+    color: #020617;
+    font-weight: 600;
+    border-radius: 6px;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.footer-btn:hover {
+    background: #0ea5e9;
+    transform: translateY(-2px);
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+    color: #cbd5e1;
+    font-size: 1.4rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #38bdf8;
+    transform: translateY(-5px) scale(1.1);
+}
+
+.footer-line {
+    border-color: #1e293b;
+    margin: 30px 0;
+}
+
+.footer-bottom {
+    font-size: 0.85rem;
+    color: #94a3b8;
+}
+/* --- Page Background --- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f0f4f8; /* light blue-gray background for the whole page */
+}
+
+/* --- Section Backgrounds --- */
+section:nth-of-type(1) {
+    background-color: #ffffff; /* Smart Devices section - white for clarity */
+    padding: 40px 15px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+}
+
+section:nth-of-type(2) {
+    background-color: #e9f7ff; /* Television section - very light blue */
+    padding: 40px 15px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+}
+
+section:nth-of-type(3) {
+    background-color: #fff3e0; /* Amazing Gadgets - soft orange */
+    padding: 40px 15px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+}
+
+section:nth-of-type(4) {
+    background-color: #f9fbe7; /* Laptops section - light green/yellow */
+    padding: 40px 15px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+}
+
+section:nth-of-type(5) {
+    background-color: #fff; /* Tech News Digest - white again */
+    padding: 40px 15px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+}
+
+/* --- Cards / Columns Styling --- */
+.col-md-3 {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.col-md-3:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* --- Carousel & Images --- */
+#mycarousel .carousel-item img {
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+    transition: transform 0.5s;
+}
+
+#mycarousel .carousel-item img:hover {
+    transform: scale(1.05);
+}
+
+/* --- Headings & Text --- */
+h3 {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    color: #1a1a1a;
+    font-weight: 600;
+}
+
+h5 {
+    margin-top: 15px;
+    color: #dc3545; /* accent red */
+    font-weight: 500;
+}
+
+p {
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 992px) {
+    #mycarousel .carousel-item img {
+        height: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    section.row.align-items-center {
+        text-align: center;
+    }
+
+    section.row.align-items-center img {
+        margin-bottom: 20px;
+        width: 90%;
+    }
+}
+
+@media (max-width: 576px) {
+    h3 {
+        font-size: 22px;
+    }
+
+    h5 {
+        font-size: 16px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+}
+
+    </style>
 </head>
 <body>
      <!-- setion one starts here -->
@@ -22,178 +220,266 @@
                         <div class="navbar-nav">
                             <a href="index.html" class="nav-link">Home</a>
                             <a href="smartphones.html" class="nav-link">Smart Phones</a>
-                            <a href="#" class="nav-link"></a>
+                            <a href="tvs.html" class="nav-link">Smarts TVs</a>
                         </div>
                         <div class=""></div>
                      </div>
                 </nav>
             </div>
-<h3>ssomething something</h3>
-         <p>These powerful devices are designed to make life easier faster and more connected, they help you study smarte, work efficiently, create projects and enjoy games and movies on bigger screen and smaller ones. They are perfect for leaning anytime anywhere.</p>
-             
          </section>
         <!-- section one ends here -->
-        <!-- section two starts here -->
-         <section class="row">
-             <div class="col-lg-12">
-                <!-- below is the div that will hold all the contents of the carousel. -->
-                 <div class="carousel slide" data-bs-ride="carousel" id="mycarousel">
-                    <!-- below is the div that will hold all the images  -->
-                     <div class="carousel-inner">
-                        <!-- below is the div with the fist image -->
-                         <div class="carousel-item">
-                            <img src="images/ipad2.jpg" alt="tv twelve" class="d-block w-100" height="350px">
-                         </div>
-                         <!-- below is the div with the second image -->
-                          <div class="carousel-item">
-                            <img src="images/tv1.webp" alt="tv one "class="d-block w-100" height="350px">
-                          </div>
-                          <!-- ?below is the div with the third image -->
-                           <div class="carousel-item active">
-                            <img src="images/lap6.avif" alt="tv thirteen"class="d-block w-100" height="350px">
-                           </div>
-                           <!-- below is the div with the fourth image -->
-                            <div class="carousel-item">
-                                <img src="images/tab2.jpg" alt="tv six"class="d-block w-100" height="350px">
-                            </div>
-                            <!-- below is the div for the fifth image -->
-                             <div class="carousel-item">
-                                <img src="images/lap3.avif" alt="tv three" class="d-block w-100" height="350px">
-                             </div>
-                     </div>
+         <!-- Section Two -->
+<h3>Smart Devices</h3>
+<p>
+    These powerful devices are designed to make life easier, faster, and more connected.
+    They help you study smarter, work efficiently, create projects, and enjoy games and movies
+    on both big and small screens. They are perfect for learning anytime, anywhere.
+</p>
 
-                     <!-- below are the controls -->
-                      <a href="#mycarousel" class="carousel-control-prev" data-bs-slide="prev"><span class="carousel-control-prev-icon bg-danger"></span></a>
-                      <a href="#mycarousel" class="carousel-control-next" data-bs-slide="next"><span class="carousel-control-next-icon bg-danger"></span></a>
-                 </div>
-            </div>
-         </section> <hr>
-        <!-- section two ends here -->
-       
-         
-        <!-- section three starts here -->
-         <h3>Television</h3>
-         <p>A teletivision isn't just a screen anymore-it's an experience.with crystal clear picture quality, vibrant colors and smooth motion, every movie show or game feels more real and more exciting. it turns your living room into a mini cinema, perfect for relaxing after a long day or enjoying fun moments with family and friends.</p>
-          <section class="row">
-            <div class="col-lg-3 text-center" >
-                <img src="images/tv4.jpg" alt="family image" width="98%" height="200px">
-                <h5>Movie night</h5>
-                <p>Enjoy bonding with your family by watching movies and having fun </p>
-            </div>
-            <div class="col-lg-3 text-center">
-                <img src="images/tv8.avif" alt="dog watching " width="98%" height="200px">
-                <h5>Have fun</h5>
-                <p>Even animals can have fun watching tv with you.it all bout having fun. </p>
-            </div>
-            <div class="col-lg-3 text-center">
-                <img src="images/tv6.avif" alt="Mika2slicetoaster" width="98%" height="200px">
-                <h5>Multi purposed</h5>
-                <p>You get to watch anything you want from tv shows, football, movies e.t.c</p>
-            </div>
-            <div class="col-lg-3 text-center">
-                <img src="images/tv10.avif" alt="side piece" height="200px" width="98%">
-                <h5>Netflix and chill</h5>
-                <p>They bring convinience creativity and entertainment into every life.</p>
-            </div>
-         </section> <hr>
-        <!-- section three ends here -->
+<section class="row">
+    <div class="col-lg-12">
 
-         <!-- section four starts here  -->
-         <section class="row">
-            <div class="col-lg-8">
-                <img src="images/together3.jpg" alt="together image" height="300px" width="95%">
-            </div>
-            <div class="col-lg-4">
-                <h3>Amaizing gadgets</h3>
-                <p>These gadgets help us communicate instantly, learn new skills, stay organised and access information anytime, anywhere. in school and at work these gadgets help us improve productivity by saving time and helping us to do more tasks efficiently <br>
+        <div id="mycarousel" class="carousel slide" data-bs-ride="carousel">
 
-                    Gadjets are also important ffor entertainment and creativity, listening to music watching videos,taking photos,gaming or creating contentall depending on smart devices. They even help with safety and health like tracking fittness, setting reminders, or staying connected in emergencies.
-                </p>
+            <!-- Carousel Images -->
+            <div class="carousel-inner">
+
+                <div class="carousel-item active">
+                    <img src="images/ipad2.jpg" alt="iPad device" class="d-block w-100" height="350">
+                </div>
+
+                <div class="carousel-item">
+                    <img src="images/tv1.webp" alt="Smart television" class="d-block w-100" height="350">
+                </div>
+
+                <div class="carousel-item">
+                    <img src="images/lap6.avif" alt="Modern laptop" class="d-block w-100" height="350">
+                </div>
+
+                <div class="carousel-item">
+                    <img src="images/tab2.jpg" alt="Tablet device" class="d-block w-100" height="350">
+                </div>
+
+                <div class="carousel-item">
+                    <img src="images/lap3.avif" alt="Portable laptop" class="d-block w-100" height="350">
+                </div>
+
             </div>
-         </section>
-        <!-- section four ends here -->
-        <!-- section five starts here -->
-         <h3>Laptops</h3>
-         <p>Laptops aren't just devices it's freedom and convinience in one sleek package. Laptops let you work, study , watch movies, play games and stay connectedd whereever you are.Fast performance means no waiting around a sharp dislap makes everything look better and a comfortable keyboard turns long hours into easy ones. </p>
-         <section class="row">
-            <div class="col-lg-4 text-center" >
-                <img src="images/lap1.webp" alt="family image" width="98%" height="200px">
-                <h5>Work</h5>
-                <p>they are essential for work because they combine power, portability and convinience </p>
-            </div>
-            <div class="col-lg-4 text-center">
-                <img src="images/lap2.webp" alt="dog watching " width="98%" height="200px">
-                <h5>Artificial Intelligence</h5>
-                <p>they work together to create a smarte, clearer and more enjoyable experiences </p>
-            </div>
-            
-            <div class="col-lg-4 text-center">
-                <img src="images/lap5.avif" alt="side piece" height="200px" width="98%">
-                <h5>Education</h5>
-                <p>Theye at tools for children when they are used in the right way.</p>
-            </div>
-         </section> <hr>
-        <!-- section five ends here -->
-        <!-- section six starts here -->
-          <section class="row">
-            <div class="col-md-3">
-                <h3>Tech News Digest</h3>
-                <p>Stay ahead with the lastest in computing and tech innovation. From AI breakthroughs to major industry shifts we cover stories shaping the digital world.</p> <br>
-                
-            </div>
-            <div class="col-md-3">
-                <h3>TVs & Home Entertainment</h3>
-                <p>Transform your living rooom. Get expert insights on 4K/8K TVs, soundbars,streaminng devices and smart displays for the ultimate viewing experience </p> <br><br>
-                
-            </div>
-            <div class="col-md-3">
-                <h3>Hardware</h3>
-                <p>Get the latest reviews and news on processors, graphics cards and next-generation components. find out whats worth the upgrade and whats coming next.</p><br>
-                
-            </div>
-            <div class="col-md-3">
-                <h3>Laptops and Computing</h3>
-                <p> From ultrabooks and powerful gaming laptops, we break down performance, battery life, design, and value. Find yourperfect machine for work, crestivity or play.</p><br>
-                
-                
-            </div>
-           </section>
-        <!-- section six ends here -->
+
+            <!-- Carousel Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#mycarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon bg-danger"></span>
+            </button>
+
+            <button class="carousel-control-next" type="button" data-bs-target="#mycarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon bg-danger"></span>
+            </button>
+
+        </div>
+
+    </div>
+</section>
+
+<hr>
+
+<!-- Section Three -->
+<h3>Television</h3>
+<p>
+    A television isn't just a screen anymore — it's an experience. With crystal clear picture
+    quality, vibrant colors, and smooth motion, every movie, show, or game feels more real and exciting.
+    It turns your living room into a mini cinema, perfect for relaxing after a long day or
+    enjoying fun moments with family and friends.
+</p>
+
+<section class="row text-center">
+
+    <div class="col-lg-3">
+        <img src="images/tv4.jpg" alt="Family watching movies together" width="98%" height="200">
+        <h5>Movie Night</h5>
+        <p>Enjoy bonding with your family while watching movies and having fun together.</p>
+    </div>
+
+    <div class="col-lg-3">
+        <img src="images/tv8.avif" alt="Dog watching television" width="98%" height="200">
+        <h5>Entertainment for Everyone</h5>
+        <p>Even pets can enjoy relaxing moments while watching TV with you.</p>
+    </div>
+
+    <div class="col-lg-3">
+        <img src="images/tv6.avif" alt="Home entertainment setup" width="98%" height="200">
+        <h5>Multi-Purpose</h5>
+        <p>Watch TV shows, football matches, movies, and many other types of entertainment.</p>
+    </div>
+
+    <div class="col-lg-3">
+        <img src="images/tv10.avif" alt="Modern living room television" width="98%" height="200">
+        <h5>Streaming & Relaxing</h5>
+        <p>Televisions bring convenience, creativity, and entertainment into everyday life.</p>
+    </div>
+
+</section>
+
+<hr>
+
+<!-- Section Four -->
+<section class="row align-items-center">
+
+    <div class="col-lg-8">
+        <img src="images/together3.jpg" alt="People using gadgets together" height="300" width="95%">
+    </div>
+
+    <div class="col-lg-4">
+        <h3>Amazing Gadgets</h3>
+        <p>
+            These gadgets help us communicate instantly, learn new skills, stay organized,
+            and access information anytime, anywhere. In school and at work, gadgets improve
+            productivity by saving time and helping us complete tasks efficiently.
+            <br><br>
+            Gadgets are also important for entertainment and creativity such as listening to music,
+            watching videos, taking photos, gaming, or creating content using smart devices.
+            They also help with safety and health by tracking fitness, setting reminders,
+            and keeping us connected during emergencies.
+        </p>
+    </div>
+
+</section>
+
+<hr>
+
+<!-- Section Five -->
+<h3>Laptops</h3>
+<p>
+    Laptops are not just devices — they provide freedom and convenience in one sleek package.
+    They allow you to work, study, watch movies, play games, and stay connected wherever you are.
+    Fast performance reduces waiting time, sharp displays improve visual quality, and comfortable
+    keyboards make long working hours easier.
+</p>
+
+<section class="row text-center">
+
+    <div class="col-lg-4">
+        <img src="images/lap1.webp" alt="Laptop for work" width="98%" height="200">
+        <h5>Work</h5>
+        <p>Laptops are essential for work because they combine power, portability, and convenience.</p>
+    </div>
+
+    <div class="col-lg-4">
+        <img src="images/lap2.webp" alt="Laptop running artificial intelligence software" width="98%" height="200">
+        <h5>Artificial Intelligence</h5>
+        <p>Laptops and AI work together to create smarter, clearer, and more enjoyable experiences.</p>
+    </div>
+
+    <div class="col-lg-4">
+        <img src="images/lap5.avif" alt="Student using laptop for education" width="98%" height="200">
+        <h5>Education</h5>
+        <p>Laptops are powerful tools for students when used responsibly and effectively.</p>
+    </div>
+
+</section>
+
+<hr>
+
+<!-- Section Six -->
+<section class="row">
+
+    <div class="col-md-3">
+        <h3>Tech News Digest</h3>
+        <p>
+            Stay ahead with the latest in computing and technology innovation.
+            From AI breakthroughs to major industry changes, we cover stories shaping the digital world.
+        </p>
+    </div>
+
+    <div class="col-md-3">
+        <h3>TVs & Home Entertainment</h3>
+        <p>
+            Transform your living room. Get expert insights on 4K and 8K TVs, soundbars,
+            streaming devices, and smart displays for the ultimate viewing experience.
+        </p>
+    </div>
+
+    <div class="col-md-3">
+        <h3>Hardware</h3>
+        <p>
+            Get the latest reviews and news on processors, graphics cards, and next-generation components.
+            Discover what is worth upgrading and what is coming next.
+        </p>
+    </div>
+
+    <div class="col-md-3">
+        <h3>Laptops & Computing</h3>
+        <p>
+            From ultrabooks to powerful gaming laptops, we break down performance, battery life,
+            design, and value to help you find the perfect machine for work, creativity, or gaming.
+        </p>
+    </div>
+
+</section>
+
         <!-- section seven starts here -->
-         <section class="row bg-info p-4">
-            <div class="col-lg-4 text-white">
-                <h3 class="text-center">About us</h3>
-                <p>Welcome to Modern Gadjets. 
-                    Your journey to the perfect tech satrs here.
+         <footer class="footer">
+    <div class="container">
+        <div class="row">
+
+            <!-- About -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <h5 class="footer-title">Modern Gadgets</h5>
+                <p class="footer-text">
+                    Your trusted guide to the latest tech. We deliver honest reviews,
+                    expert insights, and smart recommendations to power your digital life.
                 </p>
-                <p>At modern gadgets we believe the right tachnology can tranform your daily life. Our app is built by a term of passionate tech enthusiasts dedicated to cutting through the noice. we don't list specs we deliver clea, honest and hands-on insights into the latest laptops,headphones, TVs and gadgets. Our mission is simple: to empower you with the knowledge you need to find the perfect tech whether your upgrading your home theaer choosing your next laptop or finding your ideal soundtrack. Welcome to your trusted guide in the world of gadgets </p>
-
             </div>
-            <div class="col-lg-4">
-                <h4 class="text-center text-white">Contact Us</h4>
 
-                <form action="">
-                    <input type="email" placeholder="Enter email address" class="form control"> <br>
-                    <textarea cols="50px" rows="5" class="form control" placeholder="Tell us whats on your mind......."></textarea> <br> <br>
+            <!-- Contact -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <h5 class="footer-title">Contact Us</h5>
 
-                    <input type="submit" value="Send message" class="btn btn-outline-danger">
+                <form>
+                    <input
+                        type="email"
+                        class="footer-input"
+                        placeholder="Your email"
+                        required
+                    >
+
+                    <textarea
+                        rows="3"
+                        class="footer-input"
+                        placeholder="Your message..."
+                    ></textarea>
+
+                    <button class="footer-btn">
+                        <i class="fas fa-paper-plane"></i> Send
+                    </button>
                 </form>
             </div>
 
-            <div class="col-lg-4">
-                <h4 class="text-center text-white">Stay connected</h4>
+            <!-- Social -->
+            <div class="col-lg-4 text-center">
+                <h5 class="footer-title">Stay Connected</h5>
 
-                <a href="http://www.facebook.com"></a>
-                <img src="images/fb.png" alt="">
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-x-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
 
-                <a href="http://www.instagram.com"></a>
-                <img src="images/in.png" alt="">
-
-                <a href="http://www.twitter.com"></a>
-                <img src="images/x.png" alt="">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quibusdam accusamus consequuntur doloribus inventore, at libero reiciendis cum ipsam non.</p>
+                <p class="footer-text mt-3">
+                    Follow us for tech reviews, deals, and updates.
+                </p>
             </div>
-         </section>
+
+        </div>
+
+        <hr class="footer-line">
+
+        <p class="footer-bottom text-center">
+            © 2026 Modern Gadgets. All rights reserved.
+        </p>
+    </div>
+</footer>
+
         <!-- section seven ends here -->
         <!-- section eigtht stars here -->
          

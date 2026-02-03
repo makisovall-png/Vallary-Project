@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Television</title>
+    <link rel="stylesheet" href="dist/css/bootstrap.css">
+    <script src="dist/js/bootstrap.js"></script>
+    <style>
+        /* =======================
+   GLOBAL STYLES
+======================= */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", "Segoe UI", sans-serif;
+  background-color: #f5f6f8;
+  color: #222;
+  line-height: 1.7;
+}
+
+h1, h4, h5 {
+  font-weight: 600;
+  color: #111;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h5 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+p {
+  font-size: 1rem;
+  color: #444;
+}
+
+section {
+  padding: 3rem 0;
+}
+
+/* =======================
+   HERO VIDEO
+======================= */
+.tv-hero {
+  position: relative;
+  width: 100%;
+  height: 85vh;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.tv-hero video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Optional dark overlay */
+.tv-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0.7)
+  );
+}
+
+/* =======================
+   INTRO SECTION
+======================= */
+.tv-intro {
+  max-width: 900px;
+}
+
+.tv-intro p {
+  margin-bottom: 1.2rem;
+}
+
+/* =======================
+   CARD STYLING
+======================= */
+.card-shadow {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-shadow:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+}
+
+.card-shadow img {
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* =======================
+   PRODUCT LIST
+======================= */
+.card-shadow ul {
+  padding-left: 1.2rem;
+}
+
+.card-shadow li {
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+
+/* =======================
+   BRAND SECTIONS
+======================= */
+.sony-products h5,
+.samsung-products h5,
+.lg-products h5 {
+  margin-bottom: 1.5rem;
+  border-left: 4px solid #000;
+  padding-left: 0.8rem;
+}
+
+/* =======================
+   IMAGES
+======================= */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* =======================
+   RESPONSIVE DESIGN
+======================= */
+@media (max-width: 992px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .tv-hero {
+    height: 60vh;
+  }
+}
+
+@media (max-width: 576px) {
+  section {
+    padding: 2rem 1rem;
+  }
+
+  .card-shadow {
+    margin-bottom: 1.5rem;
+  }
+
+  h1 {
+    font-size: 1.7rem;
+  }
+}
+/* =======================
+   HERO VIDEO (Laptop Optimized)
+======================= */
+.tv-hero {
+  position: relative;
+  width: 100%;
+  height: 70vh;              /* Perfect for laptops */
+  max-height: 650px;         /* Prevents giant screens */
+  min-height: 420px;         /* Prevents tiny height */
+  overflow: hidden;
+  background-color: #000;
+}
+
+.tv-hero video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;         /* Key for perfect fit */
+  object-position: center;   /* Keeps subject centered */
+}
+
+/* Overlay stays intact */
+.tv-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.25),
+    rgba(0, 0, 0, 0.6)
+  );
+}
+body {
+  background: linear-gradient(
+    180deg,
+    #f2f4f8 0%,
+    #eef1f6 40%,
+    #e8ecf3 100%
+  );
+}
+    .footer {
+    background: #0f172a;
+    color: #cbd5e1;
+    padding: 60px 0 20px;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.footer-title {
+    color: #ffffff;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+}
+
+.footer-text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.footer-input {
+    width: 100%;
+    background: #020617;
+    border: 1px solid #1e293b;
+    color: #fff;
+    padding: 10px;
+    margin-bottom: 12px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.footer-input:focus {
+    outline: none;
+    border-color: #38bdf8;
+    box-shadow: 0 0 8px rgba(56, 189, 248, 0.3);
+}
+
+.footer-btn {
+    width: 100%;
+    background: #38bdf8;
+    border: none;
+    padding: 10px;
+    color: #020617;
+    font-weight: 600;
+    border-radius: 6px;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.footer-btn:hover {
+    background: #0ea5e9;
+    transform: translateY(-2px);
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+    color: #cbd5e1;
+    font-size: 1.4rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #38bdf8;
+    transform: translateY(-5px) scale(1.1);
+}
+
+.footer-line {
+    border-color: #1e293b;
+    margin: 30px 0;
+}
+
+.footer-bottom {
+    font-size: 0.85rem;
+    color: #94a3b8;
+}
+
+    </style>
+</head>
+<body>
+    <!-- section one starts here -->
+       <section class="rom">
+            <div class="col-lg-12">
+                <!-- below tag element will hold the contents of the nav bar -->
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <a href="index.html" class="navbar-brand"><b>Smart Gadgets</b></a>
+                    <!-- below is the togler/hamburger button to either collapse or expand contents depending on the screen sizes -->
+                     <button class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#navbarcontents">
+                        <span class="navbar-toggler-icon"></span>
+                     </button>
+                     <div id="navbarcontents" class="navbar-collapse collapse">
+                        <div class="navbar-nav">
+                            <a href="index.html" class="nav-link">Home</a>
+                            <a href="smartphones.html" class="nav-link">Smart Phones</a>
+                            <a href="tvs.html" class="nav-link">Smarts TVs</a>
+                        </div>
+                        <div class=""></div>
+                     </div>
+                </nav>
+            </div>
+             
+         </section> 
+     <!-- section one ends here -->
+     <!-- ================= SECTION TWO : HERO VIDEO ================= -->
+<section class="tv-hero">
+  <video
+    class="u-visible-desktop js-video video__media"
+    data-title="Sony Smart TV Experience"
+    aria-label="Sony Smart TV Experience Video"
+    playsinline
+    autoplay
+    muted
+    loop
+    preload="auto"
+    poster="https://sony.scene7.com/is/image/sonyglobalsolutions/TVFY24_TVCategory2pt-fallback-d-1?$originalDimensions$&fmt=png-alpha"
+  >
+    <source
+      src="https://sony.scene7.com/is/content/sonyglobalsolutions/Sony_FY24_TV_Category-PT-d?$originalDimensions$"
+      type="video/mp4"
+    />
+    <track
+      src="/content/dam/sony/contents/global/televisionsandhometheatre/televisions/year-2024/category-page/00_primary-tout/FY24_TV_category_page_en_GB.vtt"
+      kind="captions"
+      srclang="en"
+      label="English captions"
+      default
+    />
+  </video>
+</section>
+
+<!-- ================= SECTION THREE : INTRO CONTENT ================= -->
+<section class="tv-intro container my-5">
+  <h1 class="mb-3">Smart TVs</h1>
+
+  <p>
+    Upgrade the way you experience entertainment with a Smart Television —
+    where your screen does more than just play shows.
+  </p>
+
+  <p>
+    Enjoy instant access to your favorite movies, series, sports, music, and
+    streaming apps, all in one place. No extra boxes. No tangled wires. Just
+    turn it on, connect, and start watching.
+  </p>
+
+  <p>
+    With stunning 4K Ultra HD resolution, rich contrast, vibrant colors, and
+    immersive sound technology, every scene feels sharper, deeper, and more
+    lifelike than ever before.
+  </p>
+
+  <p>
+    Designed to complement modern living spaces, Smart TVs combine sleek
+    aesthetics, powerful performance, and intelligent features that adapt to
+    your viewing habits.
+  </p>
+
+  <p>
+    Once you go smart, you’ll wonder how you ever watched TV any other way.
+    📺✨
+  </p>
+</section>
+
+<!-- ================= SECTION FOUR : SONY PRODUCTS ================= -->
+<section class="sony-products container my-5">
+  <h5 class="mb-4">Sony Products</h5>
+
+  <div class="row g-4">
+    <!-- Product 1 -->
+    <article class="col-lg-4 col-md-6">
+      <div class="card-shadow p-3 h-100">
+        <h4>Bravia 8 II</h4>
+        <img
+          src="images/bravia8.jpg"
+          alt="Sony Bravia 8 II Smart TV"
+          height="400"
+          width="100%"
+          loading="lazy"
+        />
+        <ul class="mt-3">
+          <li>XR Processor for intelligent picture optimization</li>
+          <li>Mini LED technology for deeper blacks</li>
+          <li>4K Ultra HD resolution</li>
+          <li>High Dynamic Range (HDR)</li>
+          <li>Built-in Smart TV features</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- Product 2 -->
+    <article class="col-lg-4 col-md-6">
+      <div class="card-shadow p-3 h-100">
+        <h4>Bravia 7</h4>
+        <img
+          src="images/bravia7.webp"
+          alt="Sony Bravia 7 Smart TV"
+          height="400"
+          width="100%"
+          loading="lazy"
+        />
+        <ul class="mt-3">
+          <li>XR Processor for realistic visuals</li>
+          <li>Mini LED display technology</li>
+          <li>4K Ultra HD clarity</li>
+          <li>HDR support for enhanced contrast</li>
+          <li>Smart TV with streaming apps</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- Product 3 -->
+    <article class="col-lg-4 col-md-6">
+      <div class="card-shadow p-3 h-100">
+        <h4>Bravia 9</h4>
+        <img
+          src="images/bravia5.webp"
+          alt="Sony Bravia 9 Smart TV"
+          height="400"
+          width="100%"
+          loading="lazy"
+        />
+        <ul class="mt-3">
+          <li>Powerful XR Processor</li>
+          <li>Mini LED with superior brightness</li>
+          <li>4K Ultra HD picture quality</li>
+          <li>High Dynamic Range (HDR)</li>
+          <li>Next-generation Smart TV platform</li>
+        </ul>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ================= SECTION FIVE : SAMSUNG PRODUCTS ================= -->
+<section class="samsung-products container my-5">
+  <h5 class="mb-4">Samsung Products</h5>
+
+  <div class="row g-4">
+    <article class="col-lg-6 col-md-6">
+      <div class="card-shadow p-3 h-100">
+        <img
+          src="images/samsung3.webp"
+          alt="Samsung Smart TV model one"
+          height="400"
+          width="100%"
+          loading="lazy"
+        />
+        <p class="mt-3">
+          Samsung Smart TV with advanced picture processing, vibrant colors,
+          and seamless access to popular streaming services.
+        </p>
+      </div>
+    </article>
+
+    <article class="col-lg-6 col-md-6">
+      <div class="card-shadow p-3 h-100">
+        <img
+          src="images/samsung2.webp"
+          alt="Samsung Smart TV model two"
+          height="400"
+          width="100%"
+          loading="lazy"
+        />
+        <p class="mt-3">
+          Experience immersive entertainment with Samsung’s smart features,
+          sleek design, and powerful performance.
+        </p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ================= SECTION SIX : LG TVs ================= -->
+<section class="lg-products container my-5">
+  <h5 class="mb-4">LG TVs</h5>
+
+  <div class="row">
+    <article class="col-lg-12">
+      <div class="card-shadow p-3">
+        <img
+          src="images/lg2.webp"
+          alt="LG Smart TV"
+          width="100%"
+          loading="lazy"
+        />
+        <p class="mt-3">
+          LG Smart TVs deliver stunning visuals, smooth performance, and
+          intuitive controls, making them perfect for movies, gaming, and
+          everyday entertainment.
+        </p>
+      </div>
+    </article>
+  </div>
+</section>
+<!-- footer section starts here -->
+             </footer>
+         </section> <hr>
+        <!-- section five ends here -->
+        <!-- section nine starts here -->
+         <footer class="footer">
+    <div class="container">
+        <div class="row">
+
+            <!-- About -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <h5 class="footer-title">Modern Gadgets</h5>
+                <p class="footer-text">
+                    Your trusted guide to the latest tech. We deliver honest reviews,
+                    expert insights, and smart recommendations to power your digital life.
+                </p>
+            </div>
+
+            <!-- Contact -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <h5 class="footer-title">Contact Us</h5>
+
+                <form>
+                    <input
+                        type="email"
+                        class="footer-input"
+                        placeholder="Your email"
+                        required
+                    >
+
+                    <textarea
+                        rows="3"
+                        class="footer-input"
+                        placeholder="Your message..."
+                    ></textarea>
+
+                    <button class="footer-btn">
+                        <i class="fas fa-paper-plane"></i> Send
+                    </button>
+                </form>
+            </div>
+
+            <!-- Social -->
+            <div class="col-lg-4 text-center">
+                <h5 class="footer-title">Stay Connected</h5>
+
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-x-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+
+                <p class="footer-text mt-3">
+                    Follow us for tech reviews, deals, and updates.
+                </p>
+            </div>
+
+        </div>
+
+        <hr class="footer-line">
+
+        <p class="footer-bottom text-center">
+            © 2026 Modern Gadgets. All rights reserved.
+        </p>
+    </div>
+</footer>
+<!-- footer section ends here -->
+</body>
+</html>

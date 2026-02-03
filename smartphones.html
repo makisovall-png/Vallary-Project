@@ -6,14 +6,481 @@
     <title>Smart Phones</title>
     <link rel="stylesheet" href="dist/css/bootstrap.css">
     <script src="dist/js/bootstrap.js"></script>
+    <style>
+        .footer {
+    background: #0f172a;
+    color: #cbd5e1;
+    padding: 60px 0 20px;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.footer-title {
+    color: #ffffff;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+}
+
+.footer-text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.footer-input {
+    width: 100%;
+    background: #020617;
+    border: 1px solid #1e293b;
+    color: #fff;
+    padding: 10px;
+    margin-bottom: 12px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.footer-input:focus {
+    outline: none;
+    border-color: #38bdf8;
+    box-shadow: 0 0 8px rgba(56, 189, 248, 0.3);
+}
+
+.footer-btn {
+    width: 100%;
+    background: #38bdf8;
+    border: none;
+    padding: 10px;
+    color: #020617;
+    font-weight: 600;
+    border-radius: 6px;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.footer-btn:hover {
+    background: #0ea5e9;
+    transform: translateY(-2px);
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+    color: #cbd5e1;
+    font-size: 1.4rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #38bdf8;
+    transform: translateY(-5px) scale(1.1);
+}
+
+.footer-line {
+    border-color: #1e293b;
+    margin: 30px 0;
+}
+
+.footer-bottom {
+    font-size: 0.85rem;
+    color: #94a3b8;
+}
+/* ===== Global Styles ===== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+}
+
+/* Section Titles */
+.section-title {
+    font-weight: 700;
+    color: #1a1a1a;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Paragraphs */
+#smartphones-oppo p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Hero Image */
+#smartphones-oppo .img-fluid {
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Cards */
+#smartphones-oppo .card {
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+}
+
+#smartphones-oppo .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Card Images */
+#smartphones-oppo .card img {
+    border-bottom: 1px solid #eee;
+    border-radius: 8px 8px 0 0;
+}
+
+/* Card Headings */
+#smartphones-oppo .card h5 {
+    font-weight: 600;
+    color: #0d6efd;
+    margin-bottom: 0.5rem;
+}
+
+/* Carousel Controls */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(13, 110, 253, 0.8);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    top: 45%;
+}
+
+/* Footer */
+#smartphones-oppo footer p {
+    font-size: 0.95rem;
+}
+
+#smartphones-oppo footer a {
+    color: #0d6efd;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+#smartphones-oppo footer a:hover {
+    color: #0a58ca;
+}
+
+/* Responsive tweaks */
+@media (max-width: 992px) {
+    #smartphones-oppo .row.align-items-center {
+        text-align: center;
+    }
+    #smartphones-oppo .row.align-items-center .col-lg-6 {
+        margin-bottom: 2rem;
+    }
+}
+/* ===== Section Background ===== */
+#smartphones-oppo {
+    background: linear-gradient(135deg, #e9f0ff, #ffffff);
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+/* Hero Image Shadow Glow */
+#smartphones-oppo .img-fluid {
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(13, 110, 253, 0.2);
+    transition: transform 0.3s;
+}
+
+#smartphones-oppo .img-fluid:hover {
+    transform: scale(1.03);
+}
+
+/* Cards */
+#smartphones-oppo .card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Hover effect: Lift + Overlay */
+#smartphones-oppo .card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.25);
+}
+
+#smartphones-oppo .card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(13, 110, 253, 0.1), rgba(13, 110, 253, 0.05));
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+#smartphones-oppo .card:hover::after {
+    opacity: 1;
+}
+
+/* Card Images */
+#smartphones-oppo .card img {
+    border-bottom: 1px solid #eee;
+    border-radius: 8px 8px 0 0;
+    object-fit: cover;
+}
+
+/* Card Headings */
+#smartphones-oppo .card h5 {
+    font-weight: 600;
+    color: #0d6efd;
+    margin-bottom: 0.5rem;
+}
+
+/* Carousel Controls */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(13, 110, 253, 0.85);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    top: 45%;
+}
+
+/* Footer */
+#smartphones-oppo footer p {
+    font-size: 0.95rem;
+}
+
+#smartphones-oppo footer a {
+    color: #0d6efd;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+#smartphones-oppo footer a:hover {
+    color: #0a58ca;
+}
+
+/* Responsive tweaks */
+@media (max-width: 992px) {
+    #smartphones-oppo .row.align-items-center {
+        text-align: center;
+    }
+    #smartphones-oppo .row.align-items-center .col-lg-6 {
+        margin-bottom: 2rem;
+    }
+}
+/* Tecno Carousel General */
+#tecnoCarousel {
+    margin: 40px auto;
+}
+
+/* Carousel inner spacing */
+#tecnoCarousel .carousel-inner {
+    padding: 20px 0;
+}
+
+/* Card style */
+#tecnoCarousel .card {
+    height: 100%; /* make all cards same height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Card hover effect */
+#tecnoCarousel .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Card images */
+#tecnoCarousel .card img {
+    height: 250px;      /* fixed height */
+    width: auto;
+    max-width: 100%;    /* responsive */
+    object-fit: cover;  /* maintain aspect ratio */
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* Card text */
+#tecnoCarousel .card h5 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+#tecnoCarousel .card p {
+    font-size: 0.95rem;
+    margin: 2px 0;
+    color: #555;
+}
+
+/* Series titles */
+#tecnoCarousel h4 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 20px;
+}
+
+/* Carousel controls */
+#tecnoCarousel .carousel-control-prev,
+#tecnoCarousel .carousel-control-next {
+    width: 5%;
+}
+
+#tecnoCarousel .carousel-control-prev-icon,
+#tecnoCarousel .carousel-control-next-icon {
+    background-color: #dc3545; /* Bootstrap danger red */
+    border-radius: 50%;
+    padding: 10px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 992px) {
+    #tecnoCarousel .card img {
+        height: 220px;
+    }
+}
+
+@media (max-width: 768px) {
+    #tecnoCarousel .card img {
+        height: 180px;
+    }
+}
+/* Tecno Carousel Section Background */
+#tecnoCarousel {
+    background-color: #f5f5f5; /* light gray for a clean look */
+    padding: 40px 20px;
+    border-radius: 15px;
+}
+
+/* Optional: darker header for contrast */
+#tecnoCarousel h3, 
+#tecnoCarousel h4 {
+    color: #d63384; /* Tecno-style vibrant pink/purple for headings */
+}
+/* Samsung Section Background */
+#samsungSection {
+    background-color: #e8f0fe; /* soft Samsung blue */
+    padding: 40px 20px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+}
+
+/* Carousel Inner Spacing */
+#samsungCarousel .carousel-inner {
+    padding: 20px 0;
+}
+
+/* Card Styles */
+#samsungCarousel .card {
+    height: 100%; /* uniform height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #ffffff;
+}
+
+/* Card Hover Effect */
+#samsungCarousel .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Card Images */
+#samsungCarousel .card img {
+    height: 250px;
+    width: auto;
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* Card Titles */
+#samsungCarousel .card h5 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #0d6efd; /* Samsung blue for card title */
+}
+
+/* Series Titles */
+#samsungCarousel h4 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #0d6efd; /* Samsung blue for headings */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Carousel Controls */
+#samsungCarousel .carousel-control-prev,
+#samsungCarousel .carousel-control-next {
+    width: 5%;
+}
+
+#samsungCarousel .carousel-control-prev-icon,
+#samsungCarousel .carousel-control-next-icon {
+    background-color: #0d6efd; /* Samsung blue */
+    border-radius: 50%;
+    padding: 10px;
+}
+
+/* Footer link */
+#samsungSection footer a {
+    color: #0d6efd;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+#samsungSection footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    #samsungCarousel .card img {
+        height: 220px;
+    }
+}
+
+@media (max-width: 768px) {
+    #samsungCarousel .card img {
+        height: 180px;
+    }
+}
+
+    </style>
 </head>
 <body>
      <!-- sction one starts here -->
+        <!-- setion one starts here -->
          <section class="rom">
             <div class="col-lg-12">
                 <!-- below tag element will hold the contents of the nav bar -->
                 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                    <a href="index.html" class="navbar-brand"><b>Tumaini collections</b></a>
+                    <a href="index.html" class="navbar-brand"><b>Smart Gadgets</b></a>
                     <!-- below is the togler/hamburger button to either collapse or expand contents depending on the screen sizes -->
                      <button class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#navbarcontents">
                         <span class="navbar-toggler-icon"></span>
@@ -22,438 +489,476 @@
                         <div class="navbar-nav">
                             <a href="index.html" class="nav-link">Home</a>
                             <a href="smartphones.html" class="nav-link">Smart Phones</a>
-                            <a href="#" class="nav-link">Fashion</a>
+                            <a href="tvs.html" class="nav-link">Smarts TVs</a>
                         </div>
                         <div class=""></div>
                      </div>
                 </nav>
+            </div>             
+         </section> 
+     <!-- section one ends here -->
+     <!-- section two starts here -->
+     <section id="smartphones">
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- Text Column -->
+            <div class="col-lg-6">
+                <h1 class="section-title">Smartphones</h1>
+                <p>Why stand in the rain at a phone booth arguing with a payphone when you can carry the whole world in your pocket? Your lifeline, your map, your camera, your memes, your grandma’s smile on a bad day — all tucked right next to your keys. It’s your library, your newspaper, your radio, your flashlight in the dark.</p>
+                
+                <p>It’s also your distraction, your procrastination, your endless scroll. But damn — it’s the one thing you never leave home without. Not your wallet, not your keys. It tells you everything. It’s not just a phone; it’s a tiny, glowing heartbeat connecting you to the rest of existence. You don’t own it; it’s just always there.</p>
             </div>
 
-             
-         </section>
-        <!-- section one ends here -->
-        <!-- section two starts here -->
-         <section>
-            <h1>SmartPhones</h1>
-            <p>Why stand in the rain at a phone booth arguing with a payphone when you can have the whole world in your pocket? Your lifeline, your map, your camera, your crazy memes, your grama's smile on a bad day- all tucked in right next to your keys. Its yourliblary, your news paper, ypur radio your flashlight in the dark.</p>
-            <p>It's also your distraction, your procrastinaation, your endlesss scroll. But damn-its the one thing you never leave home without. Not your wallet not your keys.That tells you everything.It's not just your phone, it's your tiny,glowing heartbeat to the rest of existance. You dont go it its just already there.</p>
-            <img src="images/phonep1.jpg" alt="person with " class="col-lg-12" width="98%" height="350px">
-            <p></p>
-         </section>
-        <!-- section two ends here -->
-        <!-- section three starts here -->
-          <section>
-                <h3>Oppo</h3>
-          </section> 
-                 <!-- section two starts here -->
-         <section class="row">
-            <div class="col-lg-12">
-                <!-- below is the div that will hold all the contents of the carousel. -->
-                 <div class="carousel slide" data-bs-ride="carousel" id="mycarousel">
-                    <!-- below is the div that will hold all the images  -->
-                     <div class="carousel-inner">
-                        <!-- below is the div with the fist image -->
-                         <div class="carousel-item">
-                            <div class="row">
-                                <div>
-                                    <h4>Oppo Reno Series</h4>
-                                 </div>
-                                <div class="col-lg-3 text-center">
-                                    <div class="card-shadow">
-                                        <div>
-                                            <h5>Oppo Reno </h5>
-                                        </div>
-                                        <div>
-                                            <img src="images/opporeno.png" alt="oppo ax3" height="350px" width="200px">
-                                        </div>
-                                        <div>
-                                            <b>Ksh</b>
-                                            <p>It has a ram of </p>
-                                            <p>It has a storage of</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-3 text-center">
-                                   
-                                    <div class="card-shadow">
-                                        <div>
-                                            <h5>Oppo Reno 15 Pro 5G</h5>
-                                        </div>
-                                        <div>
-                                            <img src="images/opporeno15pro5G.png" alt="reno 15 5g pro" height="350px" width="200px">
-                                        </div>
-                                        <div>
-                                            <b>Ksh </b>
-                                            <p>It has a ram of</p>
-                                            <p>It has a storage of </p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-3 text-center">
-                                    <div class="card-shadow">
-                                        <div>
-                                            <h5>Oppo Reno 15 5G</h5>
-                                        </div>
-                                        <div>
-                                            <img src="images/opporreno155G.png" alt=" A5 pro" height="350px" width="200px">
-                                        </div>
-                                        <div>
-                                            <b>Ksh</b>
-                                            <p>It has ram of </p>
-                                            <p>It has a storage of</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-3 text-center">
-                                    <div class="card-shadow">
-                                        <h5>Oppo Reno 12 5G </h5>
-                                    </div>
-                                    <div>
-                                        <img src="images/opporeno125G.png" alt="A6 pro" height="350px" width="200px">
-                                    </div>
-                                    <div>
-                                        <b>Ksh</b>
-                                        <p>It ahs a Ram of</p>
-                                        <p>It has storeage of </p>
-                                    </div>
-                                </div>
-                            </div>   
-                         </div>
-                         <!-- below is the div with the second image -->
-                          <div class="carousel-item">
-                            <h4>Oppo Find Series</h4>
-                            <div class="row">
-                                 <div class="col-lg-3 text-center">
-                                    <div class="card-shadow">
-                                        <div>
-                                            <h5>Oppo Find X9 </h5>
-                                        </div>
-                                        <div>
-                                            <img src="images/oppofindX9.png" alt="oppo findx9" height="350px" width="200px">
-                                        </div>
-                                        <div>
-                                            <b>Ksh</b>
-                                            <p>It has a ram of </p>
-                                            <p>It has a storage of</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-3 text-center">
-                                    <div class="card-shadow">
-                                        <div>
-                                            <h5>Oppo Find X8</h5>
-                                        </div>
-                                        <div>
-                                            <img src="images/oppofindx8.png" alt="reno FIND X8" height="350px" width="200px">
-                                        </div>
-                                        <div>
-                                            <b>Ksh </b>
-                                            <p>It has a ram of</p>
-                                            <p>It has a storage of </p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-3 text-center">
-                                    <div class="card-shadow">
-                                        <div>
-                                            <h5>Oppo Find NF</h5>
-                                        </div>
-                                        <div>
-                                            <img src="images/oppofindn5jpg.jpg" alt=" A5 pro" height="350px" width="200px">
-                                        </div>
-                                        <div>
-                                            <b>Ksh</b>
-                                            <p>It has ram of </p>
-                                            <p>It has a storage of</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-3 text-center">
-                                    <div class="card-shadow">
-                                        <h5>Oppo Find N2  </h5>
-                                    </div>
-                                    <div>
-                                        <img src="images/oppofindN2.png" alt="find n2" height="350px" width="200px">
-                                    </div>
-                                    <div>
-                                        <b>Ksh</b>
-                                        <p>It ahs a Ram of</p>
-                                        <p>It has storeage of </p>
-                                    </div>
-                                </div>
-                            </div>
-                          </div>
-                          <!-- ?below is the div with the third image -->
-                           <div class="carousel-item active">
-                            <div>
-                                <h4>Oppo A Series</h4>
-                            </div>
-                            <div class="row">
-                                 <div class="col-lg-3 text-center">
-                                    <div class="card-shadow">
-                                        <div>
-                                            <h5>Oppo A6 Pro </h5>
-                                        </div>
-                                        <div>
-                                            <img src="images/oppoa6pro.jpg" alt="oppo a6 pro" height="350px" width="200px">
-                                        </div>
-                                        <div>
-                                            <b>Ksh</b>
-                                            <p>It has a ram of </p>
-                                            <p>It has a storage of</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-3 text-center">
-                                    <div class="card-shadow">
-                                        <div>
-                                            <h5>Oppo A3x </h5>
-                                        </div>
-                                        <div>
-                                            <img src="images/oppoa3x.jpg" alt=" a 3x" height="350px" width="200px">
-                                        </div>
-                                        <div>
-                                            <b>Ksh </b>
-                                            <p>It has a ram of</p>
-                                            <p>It has a storage of </p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-3 text-center">
-                                    <div class="card-shadow">
-                                        <div>
-                                            <h5>Oppo A5 Pro</h5>
-                                        </div>
-                                        <div>
-                                            <img src="images/oppoa5pro.webp" alt=" A5 pro" height="350px" width="200px">
-                                        </div>
-                                        <div>
-                                            <b>Ksh</b>
-                                            <p>It has ram of </p>
-                                            <p>It has a storage of</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-3 text-center">
-                                    <div class="card-shadow">
-                                        <h5>Oppo A3</h5>
-                                    </div>
-                                    <div>
-                                        <img src="images/oppoA3.png" alt="A6 pro" height="350px" width="200px">
-                                    </div>
-                                    <div>
-                                        <b>Ksh</b>
-                                        <p>It ahs a Ram of</p>
-                                        <p>It has storeage of </p>
-                                    </div>
-                                </div>
-                            </div>
-                           </div>
-                           
-                            
-                     </div>
-
-                     <!-- below are the controls -->
-                      <a href="#mycarousel" class="carousel-control-prev" data-bs-slide="prev"><span class="carousel-control-prev-icon bg-danger"></span></a>
-                      <a href="#mycarousel" class="carousel-control-next" data-bs-slide="next"><span class="carousel-control-next-icon bg-danger"></span></a>
-                 </div>
+            <!-- Image Column -->
+            <div class="col-lg-6">
+                <div class="image-wrapper">
+                    <img src="images/phonep1.jpg" alt="Person holding a smartphone, looking at the screen" class="img-fluid" style="width:100%; max-height:400px; object-fit:cover; border-radius:8px;">
+                </div>
             </div>
-            <footer>
-                <p>For more information visit</p>
-                <a href="http//:https://www.oppo.com/ke/smartphones/">Oppo </a>
-            </footer>
-         </section>
-        <!-- section three ends here -->
-        <!-- section four starts here -->
-           <section>
-                <h3>Tecno</h3>
-          </section> 
-                 <!-- se tion teo starts here -->
-         <section class="row">
-            <div class="col-lg-12">
-                <!-- below is the div that will hold all the contents of the carousel. -->
-                 <div class="carousel slide" data-bs-ride="carousel" id="mycarousel">
-                    <!-- below is the div that will hold all the images  -->
-                     <div class="carousel-inner">
-                        <!-- below is the div with the fist image -->
-                         <div class="carousel-item">
-                            <div class="row">
-                                <div>
-                                    <h4>Tecno Camon Series</h4>
-                                 </div>
-                                <div class="col-lg-4 text-center">
-                                    <div class="card-shadow">
-                                        <div>
-                                            <h5>Camon 40 Pro </h5>
-                                        </div>
-                                        <div>
-                                            <img src="images/camon40pro.webp" alt="Camon 40 pro" height="350px" width="200px">
-                                        </div>
-                                        <div>
-                                            <b>Ksh</b>
-                                            <p>It has a ram of </p>
-                                            <p>It has a storage of</p>
-                                        </div>
-                                    </div>
-                                </div>
+        </div>
+    </div>
+</section>
+<hr>
 
-                                <div class="col-lg-4 text-center">
-                                   
-                                    <div class="card-shadow">
-                                        <div>
-                                            <h5>Camon 30 Pro 5G</h5>
-                                        </div>
-                                        <div>
-                                            <img src="images/camon30s.webp" alt="camon 30s" height="350px" width="250px">
-                                        </div>
-                                        <div>
-                                            <b>Ksh </b>
-                                            <p>It has a ram of</p>
-                                            <p>It has a storage of </p>
-                                        </div>
-                                    </div>
-                                </div>
+<!-- section two ends here -->
+<!-- section three starts here -->
+<!-- Smartphones & Oppo Section -->
+<section id="smartphones-oppo">
+    <div class="container py-5">
+        <!-- Oppo Carousel Section -->
+        <h3 class="section-title mb-4 text-center">Oppo Series</h3>
+        <div id="mycarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
 
-                                <div class="col-lg-4 text-center">
-                                    <div class="card-shadow">
-                                        <div>
-                                            <h5>Camon 30 Premier 5G</h5>
-                                        </div>
-                                        <div>
-                                            <img src="images/camon30primier.webp" alt=" A5 pro" height="350px" width="250px">
-                                        </div>
-                                        <div>
-                                            <b>Ksh</b>
-                                            <p>It has ram of </p>
-                                            <p>It has a storage of</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                
-                            </div>   
-                         </div>
-                         <!-- below is the div with the second image -->
-                          <div class="carousel-item">
-                            <h4>Tecno Spark Series </h4>
-                            <div class="row">
-                                 <div class="col-lg-4 text-center">
-                                    <div class="card-shadow">
-                                        <div>
-                                            <h5>Oppo Find X9 </h5>
-                                        </div>
-                                        <div>
-                                            <img src="images/tecnosparkslim.webp" alt="spark slim" height="350px" width="250px">
-                                        </div>
-                                        <div>
-                                            <b>Ksh</b>
-                                            <p>It has a ram of </p>
-                                            <p>It has a storage of</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-4 text-center">
-                                    <div class="card-shadow">
-                                        <div>
-                                            <h5>Tecno Spark 40 Pro</h5>
-                                        </div>
-                                        <div>
-                                            <img src="images/tecnospark40.webp" alt="spark 40" height="350px" width="250px">
-                                        </div>
-                                        <div>
-                                            <b>Ksh </b>
-                                            <p>It has a ram of</p>
-                                            <p>It has a storage of </p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-4 text-center">
-                                    <div class="card-shadow">
-                                        <div>
-                                            <h5>Tecno Spark 30s</h5>
-                                        </div>
-                                        <div>
-                                            <img src="images/tecnospark30.webp" alt=" spark 30" height="350px" width="250px">
-                                        </div>
-                                        <div>
-                                            <b>Ksh</b>
-                                            <p>It has ram of </p>
-                                            <p>It has a storage of</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                               
+                <!-- Oppo Reno Series -->
+                <div class="carousel-item active">
+                    <h4 class="mb-3 text-center">Oppo Reno Series</h4>
+                    <div class="row justify-content-center">
+                        <div class="col-lg-3 col-md-6 mb-4 text-center">
+                            <div class="card shadow-sm p-3">
+                                <h5>Oppo Reno</h5>
+                                <img src="images/opporeno.png" alt="Oppo Reno" class="img-fluid mb-2" style="height:300px; object-fit:cover;">
+                                <p><b>Ksh:</b> Price here</p>
+                                <p>RAM: 4GB</p>
+                                <p>Storage: 128GB</p>
                             </div>
-                          </div>
-                          <!-- ?below is the div with the third image -->
-                           <div class="carousel-item active">
-                            <div>
-                                <h4>Tecno Pop Series </h4>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mb-4 text-center">
+                            <div class="card shadow-sm p-3">
+                                <h5>Oppo Reno 15 Pro 5G</h5>
+                                <img src="images/opporeno15pro5G.png" alt="Oppo Reno 15 Pro 5G" class="img-fluid mb-2" style="height:300px; object-fit:cover;">
+                                <p><b>Ksh:</b> Price here</p>
+                                <p>RAM: 8GB</p>
+                                <p>Storage: 256GB</p>
                             </div>
-                            <div class="row">
-                                 <div class="col-lg-6 text-center">
-                                    <div class="card-shadow">
-                                        <div>
-                                            <h5>Tecno Pop 10 Prp</h5>
-                                        </div>
-                                        <div>
-                                            <img src="images/tecnopop10pro.webp" alt="tecno pop10 pro" height="350px" width="70%">
-                                        </div>
-                                        <div>
-                                            <b>Ksh</b>
-                                            <p>It has a ram of </p>
-                                            <p>It has a storage of</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-6 text-center">
-                                    <div class="card-shadow">
-                                        <div>
-                                            <h5>Tecno Pop 10</h5>
-                                        </div>
-                                        <div>
-                                            <img src="images/tecnopop10.webp" alt=" pop 10" height="350px" width="70%">
-                                        </div>
-                                        <div>
-                                            <b>Ksh </b>
-                                            <p>It has a ram of</p>
-                                            <p>It has a storage of </p>
-                                        </div>
-                                    </div>
-                                </div>
-
+                        </div>
+                        <div class="col-lg-3 col-md-6 mb-4 text-center">
+                            <div class="card shadow-sm p-3">
+                                <h5>Oppo Reno 15 5G</h5>
+                                <img src="images/opporreno155G.png" alt="Oppo Reno 15 5G" class="img-fluid mb-2" style="height:300px; object-fit:cover;">
+                                <p><b>Ksh:</b> Price here</p>
+                                <p>RAM: 6GB</p>
+                                <p>Storage: 128GB</p>
                             </div>
-                           </div>
-                           
-                            
-                     </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mb-4 text-center">
+                            <div class="card shadow-sm p-3">
+                                <h5>Oppo Reno 12 5G</h5>
+                                <img src="images/opporeno125G.png" alt="Oppo Reno 12 5G" class="img-fluid mb-2" style="height:300px; object-fit:cover;">
+                                <p><b>Ksh:</b> Price here</p>
+                                <p>RAM: 4GB</p>
+                                <p>Storage: 64GB</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-                     <!-- below are the controls -->
-                      <a href="#mycarousel" class="carousel-control-prev" data-bs-slide="prev"><span class="carousel-control-prev-icon bg-danger"></span></a>
-                      <a href="#mycarousel" class="carousel-control-next" data-bs-slide="next"><span class="carousel-control-next-icon bg-danger"></span></a>
-                 </div>
+                <!-- Oppo Find Series -->
+                <div class="carousel-item">
+                    <h4 class="mb-3 text-center">Oppo Find Series</h4>
+                    <div class="row justify-content-center">
+                        <div class="col-lg-3 col-md-6 mb-4 text-center">
+                            <div class="card shadow-sm p-3">
+                                <h5>Oppo Find X9</h5>
+                                <img src="images/oppofindX9.png" alt="Oppo Find X9" class="img-fluid mb-2" style="height:300px; object-fit:cover;">
+                                <p><b>Ksh:</b> Price here</p>
+                                <p>RAM: 12GB</p>
+                                <p>Storage: 256GB</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mb-4 text-center">
+                            <div class="card shadow-sm p-3">
+                                <h5>Oppo Find X8</h5>
+                                <img src="images/oppofindx8.png" alt="Oppo Find X8" class="img-fluid mb-2" style="height:300px; object-fit:cover;">
+                                <p><b>Ksh:</b> Price here</p>
+                                <p>RAM: 8GB</p>
+                                <p>Storage: 128GB</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mb-4 text-center">
+                            <div class="card shadow-sm p-3">
+                                <h5>Oppo Find NF</h5>
+                                <img src="images/oppofindn5jpg.jpg" alt="Oppo Find NF" class="img-fluid mb-2" style="height:300px; object-fit:cover;">
+                                <p><b>Ksh:</b> Price here</p>
+                                <p>RAM: 6GB</p>
+                                <p>Storage: 128GB</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mb-4 text-center">
+                            <div class="card shadow-sm p-3">
+                                <h5>Oppo Find N2</h5>
+                                <img src="images/oppofindN2.png" alt="Oppo Find N2" class="img-fluid mb-2" style="height:300px; object-fit:cover;">
+                                <p><b>Ksh:</b> Price here</p>
+                                <p>RAM: 12GB</p>
+                                <p>Storage: 256GB</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Oppo A Series -->
+                <div class="carousel-item">
+                    <h4 class="mb-3 text-center">Oppo A Series</h4>
+                    <div class="row justify-content-center">
+                        <div class="col-lg-3 col-md-6 mb-4 text-center">
+                            <div class="card shadow-sm p-3">
+                                <h5>Oppo A6 Pro</h5>
+                                <img src="images/oppoa6pro.jpg" alt="Oppo A6 Pro" class="img-fluid mb-2" style="height:300px; object-fit:cover;">
+                                <p><b>Ksh:</b> Price here</p>
+                                <p>RAM: 3GB</p>
+                                <p>Storage: 64GB</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mb-4 text-center">
+                            <div class="card shadow-sm p-3">
+                                <h5>Oppo A3x</h5>
+                                <img src="images/oppoa3x.jpg" alt="Oppo A3x" class="img-fluid mb-2" style="height:300px; object-fit:cover;">
+                                <p><b>Ksh:</b> Price here</p>
+                                <p>RAM: 3GB</p>
+                                <p>Storage: 32GB</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mb-4 text-center">
+                            <div class="card shadow-sm p-3">
+                                <h5>Oppo A5 Pro</h5>
+                                <img src="images/oppoa5pro.webp" alt="Oppo A5 Pro" class="img-fluid mb-2" style="height:300px; object-fit:cover;">
+                                <p><b>Ksh:</b> Price here</p>
+                                <p>RAM: 4GB</p>
+                                <p>Storage: 64GB</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mb-4 text-center">
+                            <div class="card shadow-sm p-3">
+                                <h5>Oppo A3</h5>
+                                <img src="images/oppoA3.png" alt="Oppo A3" class="img-fluid mb-2" style="height:300px; object-fit:cover;">
+                                <p><b>Ksh:</b> Price here</p>
+                                <p>RAM: 2GB</p>
+                                <p>Storage: 32GB</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-            <footer>
-                <p>For more information visit</p>
-                <a href="http//:https://https://www.tecno-mobile.com/ke/phones/product-list/#new-product">Tecno Products </a>
-            </footer>
-         </section>
-        <!-- section four ends here -->
-        <!-- section five starts here -->
-        <!-- section five ends here -->
+
+            <!-- Carousel Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#mycarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#mycarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <!-- Footer -->
+        <footer class="mt-5 text-center">
+            <p>For more information, visit <a href="https://www.oppo.com/ke/smartphones/" target="_blank">Oppo Official Site</a></p>
+        </footer>
+
+    </div>
+</section>
+
+<!-- section three ends here -->
+<!-- section four starts here -->  
+<section>
+    <h3 class="text-center mb-4">Tecno Series</h3>
+    <div id="tecnoCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+
+            <!-- Tecno Camon Series -->
+            <div class="carousel-item active">
+                <h4 class="mb-3 text-center">Tecno Camon Series</h4>
+                <div class="row justify-content-center">
+                    <div class="col-lg-4 col-md-6 mb-4 text-center">
+                        <div class="card h-100 d-flex flex-column shadow-sm p-3">
+                            <h5>Camon 40 Pro</h5>
+                            <img src="images/camon40pro.webp" alt="Camon 40 Pro" class="img-fluid mb-2" style="height: 250px; object-fit: cover;">
+                            <p>RAM: 4GB</p>
+                            <p>Storage: 128GB</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 mb-4 text-center">
+                        <div class="card h-100 d-flex flex-column shadow-sm p-3">
+                            <h5>Camon 30 Pro 5G</h5>
+                            <img src="images/camon30s.webp" alt="Camon 30 Pro 5G" class="img-fluid mb-2" style="height: 250px; object-fit: cover;">
+                            <p>RAM: 6GB</p>
+                            <p>Storage: 128GB</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 mb-4 text-center">
+                        <div class="card h-100 d-flex flex-column shadow-sm p-3">
+                            <h5>Camon 30 Premier 5G</h5>
+                            <img src="images/camon30primier.webp" alt="Camon 30 Premier 5G" class="img-fluid mb-2" style="height: 250px; object-fit: cover;">
+                            <p>RAM: 8GB</p>
+                            <p>Storage: 256GB</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tecno Spark Series -->
+            <div class="carousel-item">
+                <h4 class="mb-3 text-center">Tecno Spark Series</h4>
+                <div class="row justify-content-center">
+                    <div class="col-lg-4 col-md-6 mb-4 text-center">
+                        <div class="card h-100 d-flex flex-column shadow-sm p-3">
+                            <h5>Tecno Spark Slim</h5>
+                            <img src="images/tecnosparkslim.webp" alt="Tecno Spark Slim" class="img-fluid mb-2" style="height: 250px; object-fit: cover;">
+                            <p>RAM: 3GB</p>
+                            <p>Storage: 64GB</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 mb-4 text-center">
+                        <div class="card h-100 d-flex flex-column shadow-sm p-3">
+                            <h5>Tecno Spark 40 Pro</h5>
+                            <img src="images/tecnospark40.webp" alt="Tecno Spark 40 Pro" class="img-fluid mb-2" style="height: 250px; object-fit: cover;">
+                            <p>RAM: 4GB</p>
+                            <p>Storage: 128GB</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 mb-4 text-center">
+                        <div class="card h-100 d-flex flex-column shadow-sm p-3">
+                            <h5>Tecno Spark 30s</h5>
+                            <img src="images/tecnospark30.webp" alt="Tecno Spark 30s" class="img-fluid mb-2" style="height: 250px; object-fit: cover;">
+                            <p>RAM: 3GB</p>
+                            <p>Storage: 64GB</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tecno Pop Series -->
+            <div class="carousel-item">
+                <h4 class="mb-3 text-center">Tecno Pop Series</h4>
+                <div class="row justify-content-center">
+                    <div class="col-lg-6 col-md-6 mb-4 text-center">
+                        <div class="card h-100 d-flex flex-column shadow-sm p-3">
+                            <h5>Tecno Pop 10 Pro</h5>
+                            <img src="images/tecnopop10pro.webp" alt="Tecno Pop 10 Pro" class="img-fluid mb-2" style="height: 250px; object-fit: cover;">
+                            <p>RAM: 2GB</p>
+                            <p>Storage: 32GB</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-6 mb-4 text-center">
+                        <div class="card h-100 d-flex flex-column shadow-sm p-3">
+                            <h5>Tecno Pop 10</h5>
+                            <img src="images/tecnopop10.webp" alt="Tecno Pop 10" class="img-fluid mb-2" style="height: 250px; object-fit: cover;">
+                            <p>RAM: 2GB</p>
+                            <p>Storage: 32GB</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Carousel Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#tecnoCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#tecnoCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+     <!-- Footer -->
+        <footer class="mt-5 text-center">
+            <p>For more information, visit <a href="https://www.oppo.com/ke/smartphones/" target="_blank">Oppo Official Site</a></p>
+        </footer>
+</section>
+
+<!-- section four ends here -->
+ <!-- section five starts here -->
+<section id="samsungSection">
+    <h3>Samsung</h3>
+    <div class="col-lg-12">
+        <!-- Samsung Carousel -->
+        <div id="samsungCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+            <div class="carousel-inner">
+                <!-- Samsung A Series -->
+                <div class="carousel-item active">
+                    <h4>Samsung A Series</h4>
+                    <div class="row">
+                        <div class="col-lg-4 text-center">
+                            <div class="card">
+                                <h5>Galaxy A56 5G</h5>
+                                <img src="images/galaxya565G.webp" alt="Galaxy A56">
+                            </div>
+                        </div>
+                        <div class="col-lg-4 text-center">
+                            <div class="card">
+                                <h5>Galaxy A36 5G</h5>
+                                <img src="images/galaxya365G.avif" alt="Galaxy A36">
+                            </div>
+                        </div>
+                        <div class="col-lg-4 text-center">
+                            <div class="card">
+                                <h5>Galaxy A16 5G</h5>
+                                <img src="images/galaxya165G.avif" alt="Galaxy A16">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Samsung Flip Series -->
+                <div class="carousel-item">
+                    <h4>Samsung Flip Series</h4>
+                    <div class="row">
+                        <div class="col-lg-4 text-center">
+                            <div class="card">
+                                <h5>Galaxy Z Flip 5 Certified</h5>
+                                <img src="images/galaxyflip5.webp" alt="Galaxy Flip 5">
+                            </div>
+                        </div>
+                        <div class="col-lg-4 text-center">
+                            <div class="card">
+                                <h5>Galaxy Z Flip 7</h5>
+                                <img src="images/galaxyflip7.webp" alt="Galaxy Flip 7">
+                            </div>
+                        </div>
+                        <div class="col-lg-4 text-center">
+                            <div class="card">
+                                <h5>Galaxy Z Flip 6</h5>
+                                <img src="images/flip6.webp" alt="Galaxy Flip 6">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Samsung Fold Series -->
+                <div class="carousel-item">
+                    <h4>Samsung Fold Series</h4>
+                    <div class="row">
+                        <div class="col-lg-6 text-center">
+                            <div class="card">
+                                <h5>Galaxy Z Fold 5 Certified</h5>
+                                <img src="images/galaxyfold5certified.webp" alt="Galaxy Fold 5">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 text-center">
+                            <div class="card">
+                                <h5>Galaxy Z Fold 7</h5>
+                                <img src="images/galaxyfold7.webp" alt="Galaxy Fold 7">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carousel controls -->
+            <a class="carousel-control-prev" href="#samsungCarousel" role="button" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon bg-primary rounded-circle p-2"></span>
+            </a>
+            <a class="carousel-control-next" href="#samsungCarousel" role="button" data-bs-slide="next">
+                <span class="carousel-control-next-icon bg-primary rounded-circle p-2"></span>
+            </a>
+        </div>
+
+        <footer class="mt-3">
+            <p>For more information visit:</p>
+            <a href="https://www.samsung.com/us/mobile/phones/all-phones/" target="_blank">Samsung Phones</a>
+        </footer>
+    </div>
+</section>
+<hr>
+<!-- section five ends here -->
+
+
+        
+<!-- section six starts here -->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+
+            <!-- About -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <h5 class="footer-title">Modern Gadgets</h5>
+                <p class="footer-text">
+                    Your trusted guide to the latest tech. We deliver honest reviews,
+                    expert insights, and smart recommendations to power your digital life.
+                </p>
+            </div>
+
+            <!-- Contact -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <h5 class="footer-title">Contact Us</h5>
+
+                <form>
+                    <input
+                        type="email"
+                        class="footer-input"
+                        placeholder="Your email"
+                        required
+                    >
+
+                    <textarea
+                        rows="3"
+                        class="footer-input"
+                        placeholder="Your message..."
+                    ></textarea>
+
+                    <button class="footer-btn">
+                        <i class="fas fa-paper-plane"></i> Send
+                    </button>
+                </form>
+            </div>
+
+            <!-- Social -->
+            <div class="col-lg-4 text-center">
+                <h5 class="footer-title">Stay Connected</h5>
+
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-x-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+
+                <p class="footer-text mt-3">
+                    Follow us for tech reviews, deals, and updates.
+                </p>
+            </div>
+
+        </div>
+
+        <hr class="footer-line">
+
+        <p class="footer-bottom text-center">
+            © 2026 Modern Gadgets. All rights reserved.
+        </p>
+    </div>
+</footer>
+
+<!--section six ends here  -->
            
 </body>
 </html>
